@@ -1,0 +1,15 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+
+    /* .nav-icon {
+      @apply md:w-10 md:h-10 w-6 h-6
+    } */
+
+    .nav-btn {
+        @apply font-bold py-1 px-2 rounded inline-flex items-center flex-col m-2 hover:bg-slate-300 transition-all hover:cursor-pointer
+      }
+
+  }
