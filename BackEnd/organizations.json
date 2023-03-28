@@ -1,0 +1,73 @@
+
+[
+    {
+        "name" : "Wounded Warrior Project",	
+
+        "website" : "https://www.woundedwarriorproject.org/",
+
+        "image" : "https://www.woundedwarriorproject.org/media/a5onb5s2/wwp-logo_black_horizontal.png?anchor=center&mode=crop&width=1200&height=630&rnd=132773478410900000",
+
+        "mission" : "To honor and empower wounded warriors.", 
+
+        "description" : "Wounded Warrior Project began in 2003 as a small, grassroots effort providing simple care and comfort items to the hospital bedsides of the first wounded service members returning home from the conflicts in Iraq and Afghanistan. As their post-service needs evolved, so have our programs and services. Today, through our direct programs in mental health, career counseling, and long-term rehabilitative care, along with our advocacy efforts, we improve the lives of millions of warriors and their families.",	
+
+        "tags" : ["Mental Health", "Career Counseling", "Rehabilitative Care"],
+        
+        "likes" : 0
+    },
+
+    {
+        "name": "Travis Manion Foundation",	
+
+        "website" : "https://www.travismanion.org/",
+
+        "image" : "https://www.travismanion.org/assets/Op-Legacy/TMF-Apparel-Assets-01-CircleBadge-Black-6.png",
+
+        "mission" : "TMF empowers veterans and families of fallen heroes to develop character in future generations.",	
+
+        "description": "TMF strives to unite and strengthen communities by training, developing, and highlighting the role models that lead them. We develop programs, training opportunities, and events designed to empower veterans and families of the fallen, and then inspire them to pass on their values to the next generation and the community at large.",
+
+        "tags": ["Mentor", "Community", "Purpose"],
+        
+        "likes" : 0
+    },
+
+    {
+        "name" : "No Barriers",
+
+        "website" : "https://nobarriersusa.org/",
+
+        "image" : "https://ml.globenewswire.com/Resource/Download/77f07088-8eda-4898-acbb-e31a6d22bb17?size=2",
+
+        "mission" : "Provide transformative programs and experiences that shift mindsets, create belonging, and foster self-discovery to elevate individuals and their communities.",
+
+        "description" : "The No Barriers framework teaches you step-by-step how to break through your own challenges and live a driven, purposeful life. Despite the barriers, both big and small that each of us face, we can learn how to push past them, reconnect with our purpose, and unleash the best in ourselves and others.",
+        
+        "tags" : ["Mental Health", "Community", "Expeditions"],
+
+        "likes" : 0
+    },
+
+    {
+        "name" : "Fourblock",
+
+        "website" : "https://fourblock.org/",
+
+        "image" : "https://careerrecon.com/wp-content/uploads/2022/03/Four-Block-CareerRecon-708x472.png",
+
+        "mission" : "Our mission is to equip veterans and military spouses to successfully transition to meaningful civilian careers.",
+
+        "description" : "We are a nation-wide community of veterans and employers dedicated to transforming the veteran transition process. We look beyond transition to equip our veterans to achieve their potential. We look beyond landing jobs to equip our veterans to pursue careers that fit their calling. We look beyond the now—we’re shaping the future for a new generation of veterans.",
+
+        "tags" : ["Employment", "Transition"],
+
+        "likes" : 0
+
+    }
+
+
+]
+
+
+
+
