@@ -1,0 +1,15 @@
+[
+    {
+        "name": "Cathy Christian",
+        "image" : "{require('../images/poop-emoji.jpg')}",
+        "about" : "Cathy was an air force vet, she worked 1000 years in PM @ Prudential, she has a son who is really smart and also attractive."
+
+    },
+
+    {
+        "name": "Not Cathy Christian",
+        "image" : "{require('../images/poop-emoji.jpg')}",
+        "about" : "Cathy was an air force vet, she worked 1000 years in PM @ Prudential, she has a son who is really smart and also attractive."
+
+    }
+]
