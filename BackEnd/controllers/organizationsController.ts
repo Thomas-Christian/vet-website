@@ -14,16 +14,15 @@ organization.post('/', async (req, res) => {
     }).save();
 
     res.status(200).send(newOrganization);
+
   } catch (error) {
     res.status(500).json({ message: `Unable to add: ${error}` });
     console.log(error);
   }
 });
 
-// UPDATE 
+// UPDATE
 organization.put('/:id', async (req, res) => {
-
-  
 
   //console.log(selectedOrg)
 
@@ -33,25 +32,19 @@ organization.put('/:id', async (req, res) => {
     }
   )
 
-
-
   res.json(req.params.id)
-  
 })
 
 // GET BY CATEGORY
 organization.get('/:category', async (req, res) => {
   try {
-    
     const selectedCategory = await organizationModel.find({
       'tags': new RegExp(`${req.params.category}`, 'i')
     })
-    
     // CHECK IF COMPANY WITH TAG IS FOUND
     if (selectedCategory.length > 0) {
       res.send(selectedCategory)
     }
-
     else {
       res.json( {message: `Can not find companies tagged ${req.params.category}`})
     }
@@ -59,11 +52,10 @@ organization.get('/:category', async (req, res) => {
     //console.log(selectedCategory.length)
   }
 
-  catch (error) { 
+  catch (error) {
     res.status(500).json({ message: `Unable to get: ${error}` })
   }
-  
-})
 
+})
 
 module.exports = organization;
