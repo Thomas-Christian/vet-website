@@ -12,12 +12,17 @@
         "description" : "Wounded Warrior Project began in 2003 as a small, grassroots effort providing simple care and comfort items to the hospital bedsides of the first wounded service members returning home from the conflicts in Iraq and Afghanistan. As their post-service needs evolved, so have our programs and services. Today, through our direct programs in mental health, career counseling, and long-term rehabilitative care, along with our advocacy efforts, we improve the lives of millions of warriors and their families.",	
 
         "tags" : ["Mental Health", "Career Counseling", "Rehabilitative Care"],
+<<<<<<< HEAD
         
         "icons" : [],
 
         "rating" : 0,
 
         "totalRating" : 0
+=======
+
+        "likes" : 0
+>>>>>>> 9be84432f711a0a40c95dd59b7ecad318d24eb04
     },
 
     {

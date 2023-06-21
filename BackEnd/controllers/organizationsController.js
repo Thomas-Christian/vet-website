@@ -35,7 +35,7 @@ organization.post('/', (req, res) => __awaiter(void 0, void 0, void 0, function*
         console.log(error);
     }
 }));
-// UPDATE 
+// UPDATE
 organization.put('/:id', (req, res) => __awaiter(void 0, void 0, void 0, function* () {
     //console.log(selectedOrg)
     organizationModel.findByIdAndUpdate(req.params.id, { $inc: { totalRatings: 1, rating: parseInt(req.body.userRating) } }, { new: true }).then((updated) => {

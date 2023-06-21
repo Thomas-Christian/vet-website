@@ -19,7 +19,7 @@ const advisors = require('../components/Team/advisors.json')
 export default function Who() {
 
     const Person = ({person}: any ) => {
-        
+
         const [visible, setVisible] = useState(false);
 
             return (
@@ -32,13 +32,12 @@ export default function Who() {
                     <div className={"w-48 flex-wrap text-sm " + (visible ? 'flex' : 'hidden') }>
                         <p> {person.about} </p>
                     </div>
-                    
+
                 </div>
             )
-        
+
     }
-    
-    
+
     return (
         <div className="flex flex-col text-center p-4 bg-slate-500 w-full"> 
 
