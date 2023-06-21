@@ -7,6 +7,7 @@ import {
   faBellConcierge,
   faList,
   faChevronDown,
+  faMoneyBillWave,
 } from "@fortawesome/free-solid-svg-icons";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -26,14 +27,12 @@ export default function Navigation() {
 
   return (
 
-    <nav className="bg-slate-200 border-gray-200 p-2 rounded absolute top-0 w-full z-10">
+    <nav className="bg-slate-200 border-gray-200 p-2 rounded sticky top-0 w-full z-10">
 
       <div className="flex flex-wrap items-center justify-between mx-auto">
 
         <a href="/" className="flex items-center justify-center">
-          <p className="self-center p-2 text-3xl font-semibold whitespace-nowrap">
-            VET-CIERGE
-          </p>
+          <img src={require('../images/untitled.jpg')} className="h-[4rem] rounded-lg" />
         </a>
 
         <button
@@ -95,6 +94,15 @@ export default function Navigation() {
             className="nav-icon"
           />
           <span className="text-xs"> Expeditions </span>
+        </div>
+
+        <div id="discounts" className="nav-btn" onClick={handleClick}>
+          <FontAwesomeIcon
+            icon={ faMoneyBillWave }
+            size="2x"
+            className="nav-icon"
+          />
+          <span className="text-xs"> Discounts </span>
         </div>
           </ul>
 

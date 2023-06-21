@@ -1,5 +1,5 @@
 import { faAngry } from "@fortawesome/free-regular-svg-icons";
-import { faBaby, faStar } from "@fortawesome/free-solid-svg-icons";
+import { faAddressCard, faBaby, faStar } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
@@ -21,9 +21,10 @@ export default function ViewCompanies() {
       setOrganizationsCategory(data);
     };
     fetchData();
-  }, [setOrganizationsCategory, params]);
+  }, [setOrganizationsCategory, params ]);
 
   const RenderOrg = ({ item }: any) => {
+
     const [hasRating, setRating] = useState(false);
 
     // RATING AN ORG
@@ -47,18 +48,16 @@ export default function ViewCompanies() {
           }),
         });
 
-        setRating(true);
+        item.totalRating = item.totalRating + 1
 
-        //item.totalRating = item.totalRating + 1
+        setRating(true);
       }
     };
 
     let averageRating = Math.round(item.rating / item.totalRatings).toFixed(1);
 
-    //console.log( averageRating )
-
     return (
-      <div className="border-neutral-20 border rounded-lg bg-slate-300 shadow-md h-96 md:h-[32rem] m-4 w-64 md:w-96 text-center">
+      <div className="border-neutral-20 border rounded-lg bg-slate-300 shadow-md h-[30rem] md:h-[40rem] m-4 w-64 md:w-96 text-center">
         <div className="p-2 flex flex-col items-center justify-between h-full">
           <h2 className="text-lg font-bold text-secondary font-secondary w-full text-center p-2 capitalize">
             {item.name}
@@ -80,17 +79,20 @@ export default function ViewCompanies() {
             rel={"noopener noreferrer"}
             href={`${item.website}`}
           >
-            {" "}
-            Website{" "}
+           
+            Website
           </a>
 
-          {/* <div id="rating" className="flex flex-col items-center static bottom-1 bg-slate-500 m-1 p-2 rounded-xl"> 
+          <div id="rating" className="flex flex-col items-center static bottom-1 bg-slate-500 m-1 p-2 rounded-xl"> 
 
-                    { averageRating && <p> Average Rating : {averageRating} <FontAwesomeIcon className="text-slate-700" icon={faStar}/> </p> }
+                    { averageRating && <p className="text-s"> Average Rating : {averageRating} <FontAwesomeIcon className="text-slate-700" icon={faStar}/> </p> }
 
-                    <p className="pt-3"> Your Rating </p>
+                    <p className="pt-2 text-s"> Your Rating </p>
 
-                    <div className="felx flex-row">
+                    { hasRating ? <div> Thanks for your input </div> : 
+                    
+                    <div className="flex flex-row">
+
                      <button value={1} onClick={(e : React.MouseEvent<HTMLButtonElement>) => handleRating(item, e)}>
                       <FontAwesomeIcon className="text-amber-300 p-1" icon={faStar} /> 
                      </button>
@@ -110,9 +112,11 @@ export default function ViewCompanies() {
                      <button value={5} onClick={(e : React.MouseEvent<HTMLButtonElement>) => handleRating(item, e)}>
                       <FontAwesomeIcon className="text-amber-300 p-1" icon={faStar} /> 
                      </button>
-                     </div>
+                    </div>}
+                    
                         
-                    </div> */}
+          </div>
+
         </div>
       </div>
     );
@@ -126,7 +130,7 @@ export default function ViewCompanies() {
       <Navigation />
 
       <div id="companies" className="flex flex-col items-center">
-        <div id="spacer" className="md:h-28 h-16" />
+        
 
         <h1
           id="logo"
@@ -135,7 +139,7 @@ export default function ViewCompanies() {
           {params.category} Organizations
         </h1>
 
-        <div className="text-center border-neutral-20 border rounded-lg bg-slate-300 shadow-md m-2 fixed left-12 bottom-0 md:bottom-12" id="legend">
+        {/* <div className="text-center border-neutral-20 border rounded-lg bg-slate-300 shadow-md m-2 fixed left-12 bottom-0 md:bottom-12" id="legend">
           <h1 className="bold text-lg"> Legend </h1>
 
           <div className="flex flex-row">
@@ -149,7 +153,7 @@ export default function ViewCompanies() {
               <span> -Meh </span>
             </div>
           </div>
-        </div>
+        </div> */}
 
         <div
           id="organizationsContainer"

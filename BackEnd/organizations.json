@@ -13,7 +13,11 @@
 
         "tags" : ["Mental Health", "Career Counseling", "Rehabilitative Care"],
         
-        "likes" : 0
+        "icons" : [],
+
+        "rating" : 0,
+
+        "totalRating" : 0
     },
 
     {
@@ -29,7 +33,11 @@
 
         "tags": ["Mentor", "Community", "Purpose"],
         
-        "likes" : 0
+        "icons": [],
+
+        "rating" : 0,
+
+        "totalRating" : 0
     },
 
     {
@@ -45,7 +53,11 @@
         
         "tags" : ["Mental Health", "Community", "Expeditions"],
 
-        "likes" : 0
+        "icons": [],
+
+        "rating" : 0,
+
+        "totalRating" : 0
     },
 
     {
@@ -61,7 +73,74 @@
 
         "tags" : ["Employment", "Transition"],
 
-        "likes" : 0
+        "icons" : [],
+
+        "rating" : 0,
+
+        "totalRating" : 0
+
+    },
+
+    {
+        "name" : "PB Abate",
+
+        "website" : "https://www.pbabbate.org/",
+
+        "image" : "https://www.pbabbate.org/hubfs/Logo%202x1-01.jpg",
+
+        "mission" : "To honor the legacy of Sergeant Matthew Abbate (uh-baa-tay) by providing warriors space to recalibrate inside the wire and community to thrive outside the wire.",
+
+        "description" : " We offer free-of-cost programming in 'Big Sky Country' for service members and eligible veterans, where they can reconnect with their warrior spirit, foster community through shared interests, and re-discover purpose in service to each other, their families, and their communities.",
+
+        "tags" : ["Community", "Expeditions"],
+
+        "icons" : [],
+
+        "rating" : 0,
+
+        "totalRating" : 0
+
+    },
+
+    {
+        "name" : "Hiring Our Heros",
+
+        "website" : "https://www.hiringourheroes.org/",
+
+        "image" : "https://hsvchamber.org/wp-content/uploads/2021/04/HOH-16-9-logo.jpg",
+
+        "mission" : "Hiring Our Heroes (HOH) connects the military community—service members, military spouses, and veterans—with American businesses to create economic opportunity and a strong and diversified workforce",
+
+        "description" : "",
+
+        "tags" : ["Employment", "Networking", "Education"],
+
+        "icons" : [],
+
+        "rating" : 0,
+
+        "totalRating" : 0
+
+    },
+
+    {
+        "name" : "Headstrong",
+
+        "website" : "https://theheadstrongproject.org/",
+
+        "image" : "https://theheadstrongproject.org/wp-content/uploads/2021/05/HS_Press-Release_Logo-100.jpg",
+
+        "mission" : "Headstrong is a national-facing mental health treatment practice of choice for our nation’s military, veterans, and their associated family members. Operating as a nonprofit, we offer stigma-free, evidence-based, trauma-focused treatment",
+
+        "description" : "",
+
+        "tags" : ["Mental Health", "PTSD", "Wellbeing"],
+
+        "icons" : [],
+
+        "rating" : 0,
+
+        "totalRating" : 0
 
     }
 

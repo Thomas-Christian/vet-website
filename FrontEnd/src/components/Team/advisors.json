@@ -1,0 +1,36 @@
+[
+    {
+        "name": "Aubrey Bussey",
+        "image" : "{require('../images/avatar.jpg')}",
+        "about" : "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. "
+
+    },
+
+    {
+        "name": "Nico Zimmel",
+        "image" : "{require('../images/avatar.jpg')}",
+        "about" : "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. "
+
+    },
+
+    {
+        "name": "Sarah Bonner",
+        "image" : "{require('../images/avatar.jpg')}",
+        "about" : "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. "
+
+    },
+
+    {
+        "name": "Trey Weber",
+        "image" : "{require('../images/avatar.jpg')}",
+        "about" : "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. "
+
+    },
+
+    {
+        "name": "Will Williamson",
+        "image" : "{require('../images/avatar.jpg')}",
+        "about" : "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. "
+
+    }
+]
