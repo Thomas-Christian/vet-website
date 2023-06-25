@@ -23,13 +23,13 @@ export default function Who() {
         const [visible, setVisible] = useState(false);
 
             return (
-                <div className="text-center flex flex-col items-center justify-center p-4" onClick={() => setVisible(!visible)}> 
-    
-                    <img alt="" id="pic" src={require('../images/avatar.jpg')} className="rounded-full inline-flex w-48 origin-top m-1" />
-    
-                    <h1 className=""> {person.name} </h1> 
-                    
-                    <div className={"w-48 flex-wrap text-sm " + (visible ? 'flex' : 'hidden') }>
+                <div className="text-center flex flex-col items-center p-4" onClick={() => setVisible(!visible)}>
+
+                    <img alt="" id="pic" src={require('../images/avatar.jpg')} className="rounded-full inline-flex w-36 lg:w-48 origin-top m-1" />
+
+                    <h1 className="text-lg font-medium"> {person.name} </h1>
+
+                    <div className={"w-36 lg:w-48 flex-wrap text-sm " + (visible ? 'block' : 'hidden') }>
                         <p> {person.about} </p>
                     </div>
 
@@ -39,24 +39,28 @@ export default function Who() {
     }
 
     return (
-        <div className="flex flex-col text-center p-4 bg-slate-500 w-full"> 
+        <>
+        <div className="flex w-[80%] flex-col text-center p-2 mt-4 bg-slate-500 rounded-lg">
 
         <h1 className="text-xl font-bold"> Founders </h1>
         <div id="founders" className="flex flex-row flex-wrap w-100 justify-center">
             {team.map((item) => (
               <Person person={item} key={item.name} />
             ))
-            }   
+            }
         </div>
-        
+        </div>
+
+        <div className="flex w-[80%] flex-col text-center p-2 my-4 bg-slate-500 rounded-lg">
         <h1 className="text-xl font-bold"> Advisory Board </h1>
-        <div id="advisors" className="flex flex-row w-100 justify-evenly">
+        <div id="advisors" className="flex flex-row flex-wrap w-100 justify-evenly">
             {advisors.map((item: any) => (
                 <Person person={item} key={item.name} />
             ))
-            }   
+            }
         </div>
 
         </div>
+        </>
       );
 }

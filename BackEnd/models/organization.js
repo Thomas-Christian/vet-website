@@ -18,9 +18,6 @@ const organizationSchema = new Schema({
     tags: {
         type: Array
     },
-    icons: {
-        type: Array
-    },
     totalRatings: {
         type: Number
     },

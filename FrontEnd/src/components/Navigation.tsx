@@ -27,18 +27,18 @@ export default function Navigation() {
 
   return (
 
-    <nav className="bg-slate-200 border-gray-200 p-2 rounded sticky top-0 w-full z-10">
+    <nav className="bg-slate-300 border-gray-200 p-2 rounded sticky top-0 w-full z-10">
 
       <div className="flex flex-wrap items-center justify-between mx-auto">
 
         <a href="/" className="flex items-center justify-center">
-          <img src={require('../images/untitled.jpg')} className="h-[4rem] rounded-lg" />
+          <img src={require('../images/untitled.jpg')} alt="background" className="h-[4rem] rounded-lg" />
         </a>
 
         <button
           onClick={() => setVisible(!visible)}
           type="button"
-          className="inline-flex items-center p-2 ml-3 text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200"
+          className="inline-flex items-center p-2 ml-3 text-sm text-gray-500 rounded-lg lg:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200"
           aria-controls="navbar-default"
           aria-expanded="false"
         >
@@ -46,11 +46,11 @@ export default function Navigation() {
           <FontAwesomeIcon icon={faChevronDown}/>
         </button>
 
-        
-        <div className={"w-full md:flex md:w-auto " + (visible ? 'block' : 'hidden') } id="navbar-default">
 
-          <ul className="flex flex-row flex-wrap justify-around p-2 mt-4 border border-gray-100 rounded-lg bg-slate-400 md:flex-row md:space-x-8 md:mt-0 md:text-sm md:font-medium md:border-0 md:bg-slate-200">
-          
+        <div className={"w-full my-1 lg:flex lg:w-auto " + (visible ? 'block' : 'hidden') } id="navbar-default">
+
+          <ul className="flex flex-row flex-wrap justify-around p-2 border border-gray-100 rounded-lg bg-slate-400 md:flex-row md:space-x-8 md:mt-0 md:text-sm md:font-medium md:border-0">
+
           <div id="education" className="nav-btn" onClick={handleClick}>
           <FontAwesomeIcon
             icon={ faGraduationCap }
@@ -61,10 +61,10 @@ export default function Navigation() {
         </div>
 
         <div id="employment" className="nav-btn" onClick={handleClick}>
-          <FontAwesomeIcon 
-            icon={ faBriefcase } 
-            size="2x" 
-            className="nav-icon" 
+          <FontAwesomeIcon
+            icon={ faBriefcase }
+            size="2x"
+            className="nav-icon"
             />
           <span className="text-xs"> Employment </span>
         </div>

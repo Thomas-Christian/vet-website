@@ -15,7 +15,7 @@ export default function ViewCompanies() {
   useEffect(() => {
     const fetchData = async () => {
       const response = await fetch(
-        `http://localhost:5000/api/organizations/${params.category}`
+        `${process.env.REACT_APP_SERVER_URL}/api/organizations/${params.category}`
       );
       const data = await response.json();
       setOrganizationsCategory(data);
@@ -37,7 +37,7 @@ export default function ViewCompanies() {
       let userRating = e.currentTarget.value;
 
       if (!hasRating) {
-        fetch(`http://localhost:5000/api/organizations/${item._id}`, {
+        fetch(`${process.env.REACT_APP_SERVER_URL}${item._id}`, {
           method: "PUT",
           headers: {
             "Access-Control-Allow-Origin": "*",
@@ -79,42 +79,42 @@ export default function ViewCompanies() {
             rel={"noopener noreferrer"}
             href={`${item.website}`}
           >
-           
+
             Website
           </a>
 
-          <div id="rating" className="flex flex-col items-center static bottom-1 bg-slate-500 m-1 p-2 rounded-xl"> 
+          <div id="rating" className="flex flex-col items-center static bottom-1 bg-slate-500 m-1 p-2 rounded-xl">
 
                     { averageRating && <p className="text-s"> Average Rating : {averageRating} <FontAwesomeIcon className="text-slate-700" icon={faStar}/> </p> }
 
                     <p className="pt-2 text-s"> Your Rating </p>
 
-                    { hasRating ? <div> Thanks for your input </div> : 
-                    
+                    { hasRating ? <div> Thanks for your input </div> :
+
                     <div className="flex flex-row">
 
                      <button value={1} onClick={(e : React.MouseEvent<HTMLButtonElement>) => handleRating(item, e)}>
-                      <FontAwesomeIcon className="text-amber-300 p-1" icon={faStar} /> 
+                      <FontAwesomeIcon className="text-amber-300 p-1" icon={faStar} />
                      </button>
-    
+
                      <button value={2} onClick={(e : React.MouseEvent<HTMLButtonElement>) => handleRating(item, e)}>
-                      <FontAwesomeIcon className="text-amber-300 p-1" icon={faStar} /> 
+                      <FontAwesomeIcon className="text-amber-300 p-1" icon={faStar} />
                      </button>
-    
+
                      <button value={3} onClick={(e : React.MouseEvent<HTMLButtonElement>) => handleRating(item, e)}>
-                      <FontAwesomeIcon className="text-amber-300 p-1" icon={faStar} /> 
+                      <FontAwesomeIcon className="text-amber-300 p-1" icon={faStar} />
                      </button>
-    
+
                      <button value={4} onClick={(e : React.MouseEvent<HTMLButtonElement>) => handleRating(item, e)}>
-                      <FontAwesomeIcon className="text-amber-300 p-1" icon={faStar} /> 
+                      <FontAwesomeIcon className="text-amber-300 p-1" icon={faStar} />
                      </button>
-    
+
                      <button value={5} onClick={(e : React.MouseEvent<HTMLButtonElement>) => handleRating(item, e)}>
-                      <FontAwesomeIcon className="text-amber-300 p-1" icon={faStar} /> 
+                      <FontAwesomeIcon className="text-amber-300 p-1" icon={faStar} />
                      </button>
                     </div>}
-                    
-                        
+
+
           </div>
 
         </div>
