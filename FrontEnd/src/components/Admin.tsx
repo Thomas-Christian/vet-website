@@ -1,12 +1,23 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useContext } from "react";
 import { useNavigate } from "react-router-dom";
+import { CurrentUser } from "../contexts/CurrentUser";
 
-export default function About() {
+export default function Admin() {
+
+  const currentUser = useContext(CurrentUser);
+  let hasUser = true
+
+    // if ( currentUser != null ) {
+    //   hasUser = false
+    // }
+
+  const navigate = useNavigate()
+
   async function handleSubmit(e: { preventDefault: () => void }) {
     e.preventDefault();
 
     //console.log(item)
-    await fetch(`${process.env.REACT_APP_SERVER_URL}api/items/`, {
+    await fetch(`${process.env.REACT_APP_SERVER_URL}/api/organizations/`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -14,7 +25,7 @@ export default function About() {
       body: JSON.stringify(org),
     });
 
-    // navigate("/");
+    navigate("/");
   }
 
   const [org, setOrg] = useState({
@@ -68,9 +79,11 @@ export default function About() {
     "Employment",
     "Transition"
   ]
-
-  return (
-    <div id="Admin" className="min-w-full flex justify-center">
+    return (
+      <>
+      {hasUser
+      ?
+        <div id="Admin" className="min-w-full flex justify-center">
       <form
         onSubmit={handleSubmit}
         className="m-4 p-2 w-[50%] bg-slate-200 rounded-md"
@@ -158,6 +171,13 @@ export default function About() {
           </button>
         </div>
       </form>
-    </div>
+        </div>
+      :
+          <h1 className="flex justify-center"> :3 </h1>
+      }
+      </>
   );
+
+
+
 }
